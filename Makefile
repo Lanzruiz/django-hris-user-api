@@ -18,8 +18,7 @@ tag:
 	@docker tag $(IMAGE):latest $(IMAGE):$(TAG)
  
 start:
-	$(info Make: Starting "$(TAG)" tagged container.)
-	@docker run -dit --name $(SERVICE) $(IMAGE):$(TAG)
+	@docker-compose up
  
 stop:
 	$(info Make: Stopping "$(TAG)" tagged container.)
